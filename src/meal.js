@@ -10,10 +10,16 @@ function createMenuItem(name, price, type) {
   };
 }
 
+function addIngredients(ingredient, array) {
+  if (!array.includes(ingredient)) {
+    array.push(ingredient);  
+  }
+}
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
-  // addIngredients,
+  addIngredients,
   // formatPrice,
   // decreasePrice,
   // createRecipe
