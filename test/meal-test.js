@@ -37,7 +37,7 @@ describe("meal.js", function() {
       assert.isFunction(createMenuItem);
     });
 
-    it.skip("should create a menu item object", function() {
+    it("should create a menu item object", function() {
       var menuItemName = nameMenuItem("French Toast");
       var menuItem = createMenuItem(menuItemName, 10.99, "breakfast");
 
@@ -122,11 +122,11 @@ describe("meal.js", function() {
   })
 
   describe("createRecipe", function() {
-    it.skip("should be a function", function () {
+    it("should be a function", function () {
       assert.isFunction(createRecipe);
     });
 
-    it.skip("should return a recipe object", function() {
+    it("should return a recipe object", function() {
       var ingredients = [];
       addIngredients("eggs", ingredients);
       addIngredients("bacon", ingredients);
