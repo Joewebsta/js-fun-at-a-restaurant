@@ -12,10 +12,13 @@ function refundOrder(orderNumber, deliveryOrders) {
   deliveryOrders.splice(orderIdx, 1);
 }
 
+function listItems(deliveryOrders) {
+  return deliveryOrders.map( order => order.item ).join(', ');
+}
 
 module.exports = {
   takeOrder,
   refundOrder,
-  // listItems,
+  listItems,
   // searchOrder
 }
