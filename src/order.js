@@ -4,10 +4,18 @@ function takeOrder(order, deliveryOrders) {
   deliveryOrders.push(order); 
 }
 
+function refundOrder(orderNumber, deliveryOrders) {
+  let orderIdx = deliveryOrders.findIndex(order => { 
+    return order.orderNumber === orderNumber;
+  });
+
+  deliveryOrders.splice(orderIdx, 1);
+}
+
 
 module.exports = {
   takeOrder,
-  // refundOrder,
+  refundOrder,
   // listItems,
   // searchOrder
 }
