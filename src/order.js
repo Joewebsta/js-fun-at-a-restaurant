@@ -16,9 +16,13 @@ function listItems(deliveryOrders) {
   return deliveryOrders.map( order => order.item ).join(', ');
 }
 
+function searchOrder(deliveryOrders, item) {
+  return deliveryOrders.map( order => order.item ).includes(item);
+}
+
 module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-  // searchOrder
+  searchOrder
 }
