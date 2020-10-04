@@ -40,11 +40,11 @@ describe("restaurant.js", function() {
   });
 
   describe("addMenuItem", function() {
-    it.skip("should be a function", function() {
+    it("should be a function", function() {
       assert.isFunction(addMenuItem);
     });
 
-    it.skip("should add an item to the lunch menu", function() {
+    it("should add an item to the lunch menu", function() {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
       var bbqPizza = {
         name: "BBQ Chicken",
@@ -57,7 +57,7 @@ describe("restaurant.js", function() {
       assert.equal(pizzaRestaurant.menus.lunch[0], bbqPizza);
     });
 
-    it.skip("should add menu items to the correct menu automatically", function() {
+    it("should add menu items to the correct menu automatically", function() {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
       var bbqPizza = {
         name: "BBQ Chicken Pizza",
@@ -78,7 +78,7 @@ describe("restaurant.js", function() {
       assert.equal(pizzaRestaurant.menus.breakfast[0], baconEggsPizza);
     });
 
-    it.skip("shouldn't add the same menu item more than once", function() {
+    it("shouldn't add the same menu item more than once", function() {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
       var bbqPizza = {
         name: "BBQ Chicken Pizza",
